@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         rantBox.text = ""
+        print("The button press worked")
     }
     
 }
