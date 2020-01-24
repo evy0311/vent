@@ -8,18 +8,41 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var rantBox: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
+        addToolBarForTextView()
+    }
+    
+    private func addToolBarForTextView() {
+        let textViewToolbar: UIToolbar = UIToolbar()
+        textViewToolbar.barStyle = .default
+        textViewToolbar.items = [
+            UIBarButtonItem(title: "Cancel", style: .done,
+                      target: self, action: #selector(cancelInput)),
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                      target: self, action: nil),
+            UIBarButtonItem(title: "End Rant", style: .done,
+                      target: self, action: #selector(doneInput))
+        ]
+        textViewToolbar.sizeToFit()
+        rantBox.inputAccessoryView = textViewToolbar
     }
 
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        rantBox.text = ""
-        print("The button press worked")
+    @objc func cancelInput() {
+        print("cancel")
+        self.rantBox.resignFirstResponder()
+        
+    }
+    @objc func doneInput() {
+        print("done")
+        self.rantBox.resignFirstResponder()
+        self.rantBox.text = "Type rant here..."
     }
     
 }

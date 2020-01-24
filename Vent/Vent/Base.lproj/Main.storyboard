@@ -16,30 +16,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type rant here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AVy-DJ-qCd">
-                                <rect key="frame" x="20" y="44" width="374" height="768"/>
+                                <rect key="frame" x="20" y="44" width="374" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuU-Iy-BEk">
-                                <rect key="frame" x="176" y="820" width="62" height="30"/>
-                                <accessibility key="accessibilityConfiguration" hint="End Rant" label="End Rant"/>
-                                <state key="normal" title="End Rant"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="afD-wt-oI7"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="AVy-DJ-qCd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4ka-9s-iVj"/>
-                            <constraint firstItem="AVy-DJ-qCd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EUI-7i-uNX"/>
-                            <constraint firstItem="OuU-Iy-BEk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YSV-uE-OPt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OuU-Iy-BEk" secondAttribute="bottom" constant="12" id="bvM-RJ-mAU"/>
-                            <constraint firstItem="AVy-DJ-qCd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fB4-jj-crR"/>
-                            <constraint firstItem="OuU-Iy-BEk" firstAttribute="top" secondItem="AVy-DJ-qCd" secondAttribute="bottom" constant="8" id="sAq-E0-HCo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AVy-DJ-qCd" secondAttribute="bottom" constant="10" id="7NS-f6-vnu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AVy-DJ-qCd" secondAttribute="bottom" constant="10" id="BXw-is-MOC"/>
+                            <constraint firstItem="AVy-DJ-qCd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JYV-xT-lEe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AVy-DJ-qCd" secondAttribute="trailing" constant="20" id="WfG-b6-HXi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AVy-DJ-qCd" secondAttribute="trailing" constant="20" id="Yry-Fg-ORa"/>
+                            <constraint firstItem="AVy-DJ-qCd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s2H-W4-IWy"/>
+                            <constraint firstItem="AVy-DJ-qCd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="szl-fd-RCX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AVy-DJ-qCd" secondAttribute="trailing" constant="20" id="tyg-iR-VSd"/>
+                            <constraint firstItem="AVy-DJ-qCd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wHx-f1-JCf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
