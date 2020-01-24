@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        // Add toolbar for keyboard
         addToolBarForTextView()
     }
     
@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         let textViewToolbar: UIToolbar = UIToolbar()
         textViewToolbar.barStyle = .default
         textViewToolbar.items = [
-            UIBarButtonItem(title: "Cancel", style: .done,
+            UIBarButtonItem(title: "Cancel", style: .plain,
                       target: self, action: #selector(cancelInput)),
             UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                       target: self, action: nil),
@@ -35,12 +35,9 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
 
     @objc func cancelInput() {
-        print("cancel")
         self.rantBox.resignFirstResponder()
-        
     }
     @objc func doneInput() {
-        print("done")
         self.rantBox.resignFirstResponder()
         self.rantBox.text = "Type rant here..."
     }
